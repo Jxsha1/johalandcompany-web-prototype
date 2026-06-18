@@ -1,31 +1,79 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 import ClientPathways from '../components/ClientPathways.astro';
 import ContactForm from '../components/ContactForm.astro';
-const pageTitle = "Johal & Company | Chartered Certified Accountants & Registered Auditors";
+
+const servicesList = [
+  { name: 'Bookkeeping Services', slug: 'bookkeeping' },
+  { name: 'VAT Compliance', slug: 'vat' },
+  { name: 'Annual Corporate Accounting', slug: 'accounting' },
+  { name: 'Statutory Auditing', slug: 'audit' },
+  { name: 'Tax Optimization Planning', slug: 'tax' },
+  { name: 'Payroll & Auto-Enrolment', slug: 'payroll' },
+  { name: 'Business Start Ups Strategy', slug: 'business-start-ups' },
+  { name: 'Corporate Finance Advisory', slug: 'corporate-finance' },
+  { name: 'Company Statutory Records', slug: 'company-statutory-records' },
+  { name: 'HMRC Enquiries & Investigations', slug: 'enquiries-investigations' },
+  { name: 'Research & Development Claims', slug: 'research-development-claims' }
+];
 ---
+<Layout title="Premium Accounting & Statutory Audit Protection Frameworks">
+  
+  <section class="relative bg-gradient-to-b from-corporate-darkBlue to-corporate-navy text-white py-24">
+    <div class="absolute inset-0 opacity-10 bg-[url('/src/assets/04-hero-hornchurch-office.jpg')] bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center space-x-2 bg-corporate-navy p-2 px-4 rounded border border-corporate-premiumBlue mb-6">
+        <img src="/src/assets/02-acca-auditor-crest.svg" alt="ACCA Crest" class="w-5 h-5 object-contain" />
+        <span class="text-xs font-bold tracking-widest text-corporate-accentIce uppercase">ACCA Registered Statutory Auditors</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
+        Protecting Corporate Assets Through <br />
+        <span class="text-corporate-accentIce">Meticulous Financial Engineering</span>
+      </h1>
+      <p class="text-xl text-corporate-slateLight max-w-3xl mx-auto opacity-90 mb-10 leading-relaxed">
+        Operating for over 35 years as a trusted accounting partnership. We blend elite regulatory precision with technical data oversight to support small to medium businesses across Hornchurch and Essex.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#services" class="px-6 py-3 bg-corporate-accentIce text-corporate-navy font-bold uppercase tracking-wider rounded hover:bg-white transition-colors">Review Service Sectors</a>
+        <a href="#contact" class="px-6 py-3 border border-corporate-accentIce text-white font-bold uppercase tracking-wider rounded hover:bg-corporate-accentIce hover:text-corporate-navy transition-colors">Secure Consultation</a>
+      </div>
+    </div>
+  </section>
 
-<html lang="en-GB">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body class="bg-corporate-slateLight text-corporate-navy font-sans antialiased">
-		
-		<Header />
+  <ClientPathways />
 
-		<main class="min-h-[calc(100vh-30rem)] flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b from-corporate-darkBlue to-corporate-navy text-white">
-			<h1 class="text-5xl font-black tracking-tight mb-4 text-corporate-accentIce">Johal & Company</h1>
-			<p class="text-xl text-corporate-slateLight max-w-2xl opacity-90">Premium Accounting, Statutory Audit and Corporate Risk Mitigation Frameworks</p>
-		</main>
+  <section id="services" class="w-full py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-black tracking-tight text-corporate-navy sm:text-4xl">Specialised Accounting Sectors</h2>
+        <p class="mt-4 text-lg text-corporate-slateText max-w-2xl mx-auto">Explore our eleven specialized operational sectors designed to secure corporate compliance and operational resilience.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {servicesList.map(srv => (
+          <div class="bg-corporate-slateLight p-6 rounded-lg border border-slate-200 hover:border-corporate-accentIce transition-all group">
+            <h3 class="text-xl font-bold text-corporate-navy mb-4 group-hover:text-corporate-premiumBlue">{srv.name}</h3>
+            <a href={`/services/${srv.slug}`} class="text-sm font-bold text-corporate-premiumBlue hover:text-corporate-accentIce flex items-center space-x-1">
+              <span>Access Sector Directory</span>
+              <span>→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-		<ClientPathways />
+  <section id="testimonials" class="w-full py-16 bg-corporate-slateLight border-t border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="text-4xl text-corporate-accentIce mb-4">“</div>
+      <blockquote class="text-xl font-medium text-corporate-navy leading-relaxed mb-6">
+        I and my family have known Jas and Johal & Company for over 12 years. I was a Director of an international engineering company trading with turnover close to £4 million with over 40 employees, and whose accounts, payroll, tax and financial planning have been managed impeccably by the partnership team.
+      </blockquote>
+      <div class="font-bold text-corporate-navy uppercase tracking-wider text-sm">Senior Director</div>
+      <div class="text-xs text-corporate-slateText">International Engineering Enterprise (£4,000,000 Annual Turnover)</div>
+    </div>
+  </section>
 
-		<ContactForm />
+  <ContactForm />
 
-	</body>
-</html>
+</Layout>
