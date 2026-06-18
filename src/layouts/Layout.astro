@@ -1,1 +1,26 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
 
+const { title } = Astro.props;
+---
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Johal & Company</title>
+  </head>
+  <body class="bg-corporate-slateLight text-corporate-navy font-sans antialiased">
+    <Header />
+    
+    <slot />
+
+    <footer class="bg-corporate-navy text-corporate-slateLight py-12 border-t border-corporate-premiumBlue">
+      <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
+        <p class="text-sm opacity-70">Registered as auditors and regulated for a range of investment activities in the United Kingdom by the Association of Chartered Certified Accountants.</p>
+        <p class="text-xs opacity-50">© 2026 Johal & Company. Premium Infrastructure Redesign by JS Office Solutions.</p>
+      </div>
+    </footer>
+  </body>
+</html>
