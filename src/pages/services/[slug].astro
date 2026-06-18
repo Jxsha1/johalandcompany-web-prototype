@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Structural content injection dictionary for all 11 core sub-services
+export async function getStaticPaths() {
+  const services = [
+    {
+      slug: 'bookkeeping',
+      title: 'Online Bookkeeping Services',
+      description: 'Streamlined transaction logging, digital ledger maintenance, and complete financial record synchronization optimized for contemporary small and medium local enterprises.',
+      features: ['Real-time expense reconciliation', 'Automated transaction processing', 'Digital receipt compilation', 'Secure cloud backup storage integration']
+    },
+    {
+      slug: 'vat',
+      title: 'VAT Compliance & Filing',
+      description: 'Meticulous value added tax calculations, return preparations, and automated submissions ensuring full structural alignment with HM Revenue and Customs requirements.',
+      features: ['Making Tax Digital compliance checks', 'Quarterly VAT calculations', 'Cross-border trade asset evaluations', 'HMRC interface support']
+    },
+    {
+      slug: 'accounting',
+      title: 'Annual Corporate Accounting',
+      description: 'Preparation of formal year-end statutory accounts and comprehensive financial status reports reflecting absolute fiscal precision for small business directors.',
+      features: ['Companies House filing execution', 'Balance sheet formulation', 'Profit and loss statements analytics', 'Director report composition']
+    },
+    {
+      slug: 'audit',
+      title: 'Statutory Auditing Services',
+      description: 'Rigorous independent financial examinations executed by registered corporate auditors to validate corporate reporting validity and safeguard structural assets.',
+      features: ['ACCA regulated compliance testing', 'Internal controls structural evaluation', 'Risk identification mapping', 'Independent audit statement delivery']
+    },
+    {
+      slug: 'tax',
+      title: 'Corporate & Personal Tax Planning',
+      description: 'High-level tax advisory optimization frameworks engineered to legally minimize tax liabilities while maximizing corporate business asset protection matrices.',
+      features: ['Corporate tax return processing', 'Capital gains tax optimization', 'Inheritance wealth safeguarding plans', 'Strategic remuneration consulting']
+    },
+    {
+      slug: 'payroll',
+      title: 'Comprehensive Payroll & RTI Management',
+      description: 'End-to-end employee payroll processing, real-time information submissions, and auto-enrolment workplace pension schema configurations.',
+      features: ['Customized digital payslip generation', 'RTI submission filing loops', 'Workplace pension auto-enrolment', 'Year-end P60 processing controls']
+    },
+    {
+      slug: 'business-start-ups',
+      title: 'Strategic Business Start Ups Planning',
+      description: 'Replacing flawed historical documentation grids with an elite operational framework designed to securely incubate and structure incoming regional corporate entities.',
+      features: ['Incorporation structure analysis', 'Tax registrations setup', 'Financial forecasting architecture', 'Business compliance benchmarking']
+    },
+    {
+      slug: 'corporate-finance',
+      title: 'Corporate Finance & Transaction Advisory',
+      description: 'Sophisticated transaction advisory layouts handling corporate capital restructuring, regional funding acquisitions, and commercial expansion evaluations.',
+      features: ['Capital sourcing optimization', 'Mergers and acquisitions tracking', 'Due diligence reporting profiles', 'Corporate valuation matrix tests']
+    },
+    {
+      slug: 'company-statutory-records',
+      title: 'Company Statutory Records Maintenance',
+      description: 'Absolute maintenance of essential company registers, confirmation statement filings, and corporate documentation governance schedules.',
+      features: ['Confirmation statement execution', 'Share allocation ledger recording', 'Director registry log management', 'Companies House compliance loops']
+    },
+    {
+      slug: 'enquiries-investigations',
+      title: 'HMRC Enquiries & Investigations Support',
+      description: 'Defensive expert support and risk mitigation consulting protecting corporate clients dealing with complex active HMRC corporate tax investigations.',
+      features: ['Direct HMRC technical interface', 'Dispute resolution representation', 'Data aggregation validation checking', 'Compliance penalty avoidance strategies']
+    },
+    {
+      slug: 'research-development-claims',
+      title: 'Research & Development Tax Credits',
+      description: 'Advanced financial engineering processes designed to capture maximum tax relief incentives for innovative small to medium firms.',
+      features: ['Technical project identification testing', 'Eligible expenditure aggregation', 'Comprehensive report synthesis', 'HMRC scheme claim optimization']
+    }
+  ];
+
+  return services.map(service => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+---
+<Layout title={service.title}>
+  <main class="py-20 bg-gradient-to-b from-corporate-darkBlue to-corporate-navy text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <nav class="mb-8 text-sm text-corporate-accentIce">
+        <a href="/" class="hover:underline">Home</a> &gt; <span class="text-white">Services</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-6">{service.title}</h1>
+      <p class="text-xl text-corporate-slateLight opacity-90 leading-relaxed mb-12 max-w-3xl">{service.description}</p>
+      
+      <div class="bg-corporate-navy p-8 rounded-lg border border-corporate-premiumBlue shadow-2xl">
+        <h2 class="text-2xl font-bold text-corporate-accentIce mb-6">Core Operational Inclusions</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {service.features.map(feature => (
+            <li class="flex items-center space-x-3 text-corporate-slateLight">
+              <span class="text-corporate-accentIce font-bold text-lg">✓</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/#contact" class="inline-block px-8 py-4 font-bold uppercase tracking-wider text-corporate-navy bg-corporate-accentIce hover:bg-white rounded transition-colors shadow-lg">
+          Enquire About This Service
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
