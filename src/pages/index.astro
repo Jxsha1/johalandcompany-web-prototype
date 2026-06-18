@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import ContactForm from '../components/ContactForm.astro';
 const pageTitle = "Johal & Company | Chartered Certified Accountants & Registered Auditors";
 ---
 
@@ -16,10 +17,12 @@ const pageTitle = "Johal & Company | Chartered Certified Accountants & Registere
 		
 		<Header />
 
-		<main class="min-h-[calc(100vh-5rem)] flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b from-corporate-darkBlue to-corporate-navy text-white">
+		<main class="min-h-[calc(100vh-25rem)] flex flex-col justify-center items-center p-6 text-center bg-gradient-to-b from-corporate-darkBlue to-corporate-navy text-white">
 			<h1 class="text-5xl font-black tracking-tight mb-4 text-corporate-accentIce">Johal & Company</h1>
 			<p class="text-xl text-corporate-slateLight max-w-2xl opacity-90">Premium Accounting, Statutory Audit and Corporate Risk Mitigation Frameworks</p>
 		</main>
+
+		<ContactForm />
 
 	</body>
 </html>
