@@ -1,5 +1,5 @@
 ---
-import '../../styles/global.css';
+import '../styles/global.css';
 import Header from '../components/Header.astro';
 
 const { title, description = "Johal & Company has been operating for over 35 years as a trusted accountancy practice and registered statutory audit partnership in Hornchurch, Essex." } = Astro.props;
@@ -24,7 +24,7 @@ const { title, description = "Johal & Company has been operating for over 35 yea
           
           <div class="space-y-4">
             <div class="flex items-center space-x-3">
-              <img src="/src/assets/image_21.png" alt="Johal & Company Logo" class="h-8 w-auto bg-white p-1 rounded" />
+              <img src="../assets/image_21.png" alt="Johal & Company Logo" class="h-8 w-auto bg-white p-1 rounded" />
               <span class="text-lg font-black tracking-wider text-white">JOHAL & COMPANY</span>
             </div>
             <p class="text-xs text-slate-400 leading-relaxed">
@@ -47,8 +47,8 @@ const { title, description = "Johal & Company has been operating for over 35 yea
           <div class="space-y-4">
             <h4 class="text-sm font-bold uppercase tracking-widest text-cyan-400">Regulatory Alignment</h4>
             <div class="flex items-center space-x-4">
-              <img src="/src/assets/image_2.png" alt="ACCA Registered Badge" class="h-10 w-auto object-contain bg-white p-1 rounded" />
-              <img src="/src/assets/image_3.png" alt="Havering Excellence Seal" class="h-10 w-auto object-contain bg-white p-1 rounded" />
+              <img src="../assets/image_2.png" alt="ACCA Registered Badge" class="h-10 w-auto object-contain bg-white p-1 rounded" />
+              <img src="../assets/image_3.png" alt="Havering Excellence Seal" class="h-10 w-auto object-contain bg-white p-1 rounded" />
             </div>
             <p class="text-[10px] text-slate-500 leading-relaxed">
               Registered as auditors and regulated for a range of investment activities in the United Kingdom by the Association of Chartered Certified Accountants.
