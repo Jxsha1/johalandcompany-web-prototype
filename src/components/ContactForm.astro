@@ -1,67 +1,67 @@
 ---
-// Secure Compliance Lead Capture Component
+// Hardened Data Ingestion Terminal Node
 ---
-<section id="contact" class="w-full py-16 bg-corporate-navy text-white">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Secure Corporate Enquiry</h2>
-      <p class="mt-4 text-lg text-corporate-slateLight opacity-80">Submit your corporate financial requirements safely through our encrypted edge network.</p>
+<section id="contact" class="w-full py-20 bg-corporate-navy text-white relative">
+  <div class="absolute inset-0 opacity-5 bg-[url('/src/assets/image_20.jpg')] bg-cover bg-center"></div>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Secure Technical Consultation</h2>
+      <p class="mt-4 text-base text-slate-300">Transmission channels are protected via serverless edge firewall parameters.</p>
     </div>
 
-    <form class="space-y-6 bg-corporate-darkBlue p-8 rounded-lg border border-corporate-premiumBlue shadow-xl">
+    <form class="space-y-6 bg-corporate-darkBlue p-10 rounded-xl border border-corporate-premiumBlue shadow-2xl">
       <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
-        
         <div>
-          <label for="full-name" class="block text-sm font-semibold text-corporate-slateLight">Full Name</label>
-          <input type="text" id="full-name" name="fullName" required class="mt-1 block w-full bg-corporate-navy border border-corporate-premiumBlue rounded px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce" />
+          <label for="name" class="block text-xs font-bold uppercase tracking-wider text-corporate-accentIce">Full Corporate Name</label>
+          <input type="text" id="name" name="name" required class="mt-2 block w-full bg-corporate-navy border border-slate-700 rounded-md px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce transition-colors" />
         </div>
-
         <div>
-          <label for="email" class="block text-sm font-semibold text-corporate-slateLight">Corporate Email Address</label>
-          <input type="email" id="email" name="email" required class="mt-1 block w-full bg-corporate-navy border border-corporate-premiumBlue rounded px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce" />
+          <label for="corporate-email" class="block text-xs font-bold uppercase tracking-wider text-corporate-accentIce">Direct Email Address</label>
+          <input type="email" id="corporate-email" name="email" required class="mt-2 block w-full bg-corporate-navy border border-slate-700 rounded-md px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce transition-colors" />
         </div>
-
       </div>
 
       <div>
-        <label for="service-type" class="block text-sm font-semibold text-corporate-slateLight">Required Financial Service Sector</label>
-        <select id="service-type" name="serviceType" required class="mt-1 block w-full bg-corporate-navy border border-corporate-premiumBlue rounded px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce">
-          <option value="" disabled selected>Select an option...</option>
+        <label for="sector" class="block text-xs font-bold uppercase tracking-wider text-corporate-accentIce">Target Accounting Sector</label>
+        <select id="sector" name="sector" required class="mt-2 block w-full bg-corporate-navy border border-slate-700 rounded-md px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce transition-colors">
+          <option value="" disabled selected>Select financial discipline...</option>
           <option value="bookkeeping">Bookkeeping Services</option>
-          <option value="vat">VAT Compliance</option>
-          <option value="accounting">Annual Corporate Accounting</option>
-          <option value="audit">Statutory Auditing</option>
-          <option value="tax">Tax Optimization Planning</option>
-          <option value="payroll">Payroll & Auto-Enrolment</option>
-          <option value="startups">Business Start Ups Strategy</option>
+          <option value="vat">VAT Compliance & Submissions</option>
+          <option value="accounting">Annual Statutory Accounts</option>
+          <option value="audit">ACCA Regulated Corporate Audit</option>
+          <option value="tax">Corporate & Personal Tax Planning</option>
+          <option value="payroll">Payroll & RTI System Management</option>
+          <option value="startups">Business Start Ups Strategic Plan</option>
           <option value="finance">Corporate Finance Advisory</option>
-          <option value="statutory">Company Statutory Records</option>
-          <option value="investigations">HMRC Enquiries & Investigations</option>
-          <option value="rd-claims">Research & Development Claims</option>
+          <option value="records">Company Statutory Records Maintenance</option>
+          <option value="investigations">HMRC Enquiries Defence</option>
+          <option value="rd-claims">Research & Development Tax Credits</option>
         </select>
       </div>
 
       <div>
-        <label for="message" class="block text-sm font-semibold text-corporate-slateLight">Enquiry Particulars</label>
-        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full bg-corporate-navy border border-corporate-premiumBlue rounded px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce"></textarea>
+        <label for="notes" class="block text-xs font-bold uppercase tracking-wider text-corporate-accentIce">Enquiry Operational Particulars</label>
+        <textarea id="notes" name="notes" rows="4" required class="mt-2 block w-full bg-corporate-navy border border-slate-700 rounded-md px-4 py-3 text-white focus:outline-none focus:border-corporate-accentIce transition-colors"></textarea>
       </div>
 
-      <div class="flex items-start">
+      <div class="flex items-start bg-corporate-navy/50 p-4 rounded border border-slate-800">
         <div class="flex items-center h-5">
-          <input id="gdpr-consent" name="gdprConsent" type="checkbox" required class="w-4 h-4 bg-corporate-navy border-corporate-premiumBlue text-corporate-accentIce rounded focus:ring-0 focus:ring-offset-0" />
+          <input id="compliance" name="compliance" type="checkbox" required class="w-4 h-4 bg-corporate-darkBlue border-slate-700 text-corporate-accentIce rounded focus:ring-0" />
         </div>
-        <div class="ml-3 text-sm">
-          <label for="gdpr-consent" class="font-medium text-corporate-slateLight">
-            I explicitly consent to Johal & Company securely processing this data in full compliance with UK GDPR frameworks to address this corporate service inquiry. View our <a href="/privacy" class="text-corporate-accentIce underline hover:text-white">Privacy Notice</a>.
+        <div class="ml-3 text-xs leading-relaxed text-slate-400">
+          <label for="compliance">
+            By executing this transmission, I verify authorization to share this data and explicitly acknowledge that Johal & Company will process these corporate metrics under UK data protection frameworks. Review our technical protection parameters within the <a href="/privacy" class="text-corporate-accentIce underline hover:text-white">Privacy Data Center</a>.
           </label>
         </div>
       </div>
 
       <div>
-        <button type="submit" class="w-full flex justify-center py-3 px-6 text-sm font-bold uppercase tracking-wider text-corporate-navy bg-corporate-accentIce hover:bg-white rounded transition-colors shadow-md">
-          Transmit Secured Enquiry
+        <button type="submit" class="w-full py-4 text-xs font-black uppercase tracking-widest text-corporate-navy bg-corporate-accentIce hover:bg-white rounded-md transition-colors shadow-lg">
+          Transmit Encrypted Enquiry Block
         </button>
       </div>
     </form>
+
   </div>
 </section>
