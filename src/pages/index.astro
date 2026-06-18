@@ -4,27 +4,27 @@ import ClientPathways from '../components/ClientPathways.astro';
 import ContactForm from '../components/ContactForm.astro';
 
 const coreSectors = [
-  { name: 'Bookkeeping', slug: 'bookkeeping', img: '/src/assets/image_11.jpg', desc: 'Secure ledger synchronization and digital cash records execution.' },
-  { name: 'VAT', slug: 'vat', img: '/src/assets/image_12.jpg', desc: 'Making Tax Digital processing and reporting optimization.' },
-  { name: 'Accounting', slug: 'accounting', img: '/src/assets/image_13.jpg', desc: 'Statutory year-end accounts generation for company directors.' },
-  { name: 'Audit', slug: 'audit', img: '/src/assets/image_8.jpg', desc: 'Regulated statutory auditing protecting corporate validation lines.' },
-  { name: 'Tax', slug: 'tax', img: '/src/assets/image_6.jpg', desc: 'Advanced corporate corporate tax architecture planning.' },
-  { name: 'Payroll', slug: 'payroll', img: '/src/assets/image_14.jpg', desc: 'Complete RTI workforce salary structuring loops.' },
-  { name: 'Business Start Ups', slug: 'business-start-ups', img: '/src/assets/image_10.jpg', desc: 'Elite incorporation layouts removing legacy textual errors.' },
-  { name: 'Corporate Finance', slug: 'corporate-finance', img: '/src/assets/image_9.jpg', desc: 'Sophisticated capital sourcing and asset advisory tracks.' },
-  { name: 'Company Statutory Records', slug: 'company-statutory-records', img: '/src/assets/image_15.jpg', desc: 'Companies House administrative compliance management.' },
-  { name: 'Enquiries & Investigations', slug: 'enquiries-investigations', img: '/src/assets/image_16.jpg', desc: 'Defensive support architectures for active HMRC reviews.' },
-  { name: 'Research & Development Claims', slug: 'research-development-claims', img: '/src/assets/image_17.jpg', desc: 'Financial engineering maximizing local corporate tax relief.' }
+  { name: 'Bookkeeping', slug: 'bookkeeping', img: '../assets/image_11.jpg', desc: 'Secure ledger synchronization and digital cash records execution.' },
+  { name: 'VAT', slug: 'vat', img: '../assets/image_12.jpg', desc: 'Making Tax Digital processing and reporting optimization.' },
+  { name: 'Accounting', slug: 'accounting', img: '../assets/image_13.jpg', desc: 'Statutory year-end accounts generation for company directors.' },
+  { name: 'Audit', slug: 'audit', img: '../assets/image_8.jpg', desc: 'Regulated statutory auditing protecting corporate validation lines.' },
+  { name: 'Tax', slug: 'tax', img: '../assets/image_6.jpg', desc: 'Advanced corporate corporate tax architecture planning.' },
+  { name: 'Payroll', slug: 'payroll', img: '../assets/image_14.jpg', desc: 'Complete RTI workforce salary structuring loops.' },
+  { name: 'Business Start Ups', slug: 'business-start-ups', img: '../assets/image_10.jpg', desc: 'Elite incorporation layouts removing legacy textual errors.' },
+  { name: 'Corporate Finance', slug: 'corporate-finance', img: '../assets/image_9.jpg', desc: 'Sophisticated capital sourcing and asset advisory tracks.' },
+  { name: 'Company Statutory Records', slug: 'company-statutory-records', img: '../assets/image_15.jpg', desc: 'Companies House administrative compliance management.' },
+  { name: 'Enquiries & Investigations', slug: 'enquiries-investigations', img: '../assets/image_16.jpg', desc: 'Defensive support architectures for active HMRC reviews.' },
+  { name: 'Research & Development Claims', slug: 'research-development-claims', img: '../assets/image_17.jpg', desc: 'Financial engineering maximizing local corporate tax relief.' }
 ];
 ---
 <Layout title="Chartered Certified Accountants & Registered Auditors">
   
   <section class="relative bg-gradient-to-b from-[#1c2541] to-[#0b132b] text-white py-32 overflow-hidden">
-    <div class="absolute inset-0 opacity-15 bg-[url('/src/assets/image_1.jpg')] bg-cover bg-center mix-blend-overlay"></div>
+    <div class="absolute inset-0 opacity-15 bg-cover bg-center mix-blend-overlay" style="background-image: url('../assets/image_1.jpg');"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       
       <div class="inline-flex items-center space-x-2 bg-[#0b132b]/90 border border-[#3a506b] rounded-full py-1.5 px-4 mb-8 backdrop-blur-sm">
-        <img src="/src/assets/image_2.png" alt="ACCA" class="h-4 w-auto bg-white rounded-sm" />
+        <img src="../assets/image_2.png" alt="ACCA" class="h-4 w-auto bg-white rounded-sm" />
         <span class="text-[10px] font-black tracking-widest text-cyan-400 uppercase">ACCA Registered Statutory Auditors</span>
       </div>
 
@@ -56,7 +56,7 @@ const coreSectors = [
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         <div class="relative rounded-xl overflow-hidden shadow-2xl border border-slate-200 group">
-          <img src="/src/assets/image_7.jpg" alt="Johal & Company Corporate Workspace" class="w-full h-auto object-cover group-hover:scale-101 transition-transform duration-500" />
+          <img src="../assets/image_7.jpg" alt="Johal & Company Corporate Workspace" class="w-full h-auto object-cover group-hover:scale-101 transition-transform duration-500" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
         </div>
 
@@ -126,7 +126,7 @@ const coreSectors = [
   </section>
 
   <section id="testimonials" class="w-full py-24 bg-white relative">
-    <div class="absolute inset-0 opacity-5 bg-[url('/src/assets/image_19.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 opacity-5 bg-cover bg-center" style="background-image: url('../assets/image_19.jpg');"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       <div class="inline-flex items-center justify-center w-12 h-12 bg-slate-50 rounded-full border border-slate-200 text-cyan-400 font-serif text-3xl mb-6 shadow-sm">“</div>
       
